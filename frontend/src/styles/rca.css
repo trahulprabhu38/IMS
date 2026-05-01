@@ -1,0 +1,138 @@
+/* ── RCA Modal ─────────────────────────────────────────────────────────────── */
+.rca-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30,50,72,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(3px);
+}
+
+.rca-modal {
+  background: var(--bg);
+  border: 1px solid var(--border-2);
+  border-top: 3px solid var(--clr-1);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(30,50,72,0.22);
+}
+
+.rca-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.rca-modal-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.rca-modal-subtitle strong {
+  color: var(--clr-1);
+}
+
+/* ── Form elements ─────────────────────────────────────────────────────────── */
+.form-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  color: var(--text);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--clr-1);
+  box-shadow: 0 0 0 2px rgba(109,148,197,0.18);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236D94C5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.form-select option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.form-textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form-error {
+  color: #b02020;
+  font-size: 12px;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  background: rgba(196,48,48,0.07);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid #b02020;
+}
+
+/* ── Actions ───────────────────────────────────────────────────────────────── */
+.rca-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.btn-secondary {
+  background: var(--surface-2);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-3);
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

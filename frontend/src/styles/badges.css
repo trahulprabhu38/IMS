@@ -1,0 +1,23 @@
+/* ── Severity badges ───────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.badge-p0 { background: rgba(196,48,48,0.10);  color: #b02020; border-color: rgba(196,48,48,0.35); }
+.badge-p1 { background: rgba(181,96,32,0.10);  color: #a05010; border-color: rgba(181,96,32,0.35); }
+.badge-p2 { background: rgba(138,120,24,0.10); color: #706010; border-color: rgba(138,120,24,0.35); }
+.badge-p3 { background: rgba(109,148,197,0.12); color: #4a7ab5; border-color: rgba(109,148,197,0.35); }
+
+/* ── Status badges ─────────────────────────────────────────────────────────── */
+.badge-open          { background: rgba(109,148,197,0.14); color: #3a6aaa; border-color: rgba(109,148,197,0.4); }
+.badge-investigating { background: rgba(203,220,235,0.45); color: #3a6aaa; border-color: rgba(109,148,197,0.3); }
+.badge-resolved      { background: rgba(42,122,74,0.12);   color: #1e6a3a; border-color: rgba(42,122,74,0.4); }
+.badge-closed        { background: rgba(0,0,0,0.06);       color: #555555; border-color: rgba(0,0,0,0.15); }

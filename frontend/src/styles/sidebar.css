@@ -1,0 +1,130 @@
+/* ── Sidebar ───────────────────────────────────────────────────────────────── */
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* ── Section labels ────────────────────────────────────────────────────────── */
+.sidebar-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 16px;
+  margin-bottom: 6px;
+}
+
+/* ── Filter buttons ────────────────────────────────────────────────────────── */
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 16px 8px 13px;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: left;
+  transition: color 0.12s, background 0.12s;
+}
+
+.filter-btn:hover {
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+.filter-btn--active {
+  background: var(--surface-2);
+  color: var(--text);
+  border-left-color: var(--clr-1);
+}
+
+.filter-count {
+  font-size: 11px;
+  background: var(--surface-3);
+  color: var(--text-muted);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-variant-numeric: tabular-nums;
+  min-width: 22px;
+  text-align: center;
+}
+
+.filter-count--active {
+  background: rgba(109,148,197,0.16);
+  color: var(--clr-1);
+}
+
+/* ── Divider ───────────────────────────────────────────────────────────────── */
+.sidebar-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
+}
+
+/* ── History section ───────────────────────────────────────────────────────── */
+.history-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+}
+
+.history-item:hover {
+  background: var(--surface-2);
+}
+
+.history-item-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.history-sev-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.history-title {
+  font-size: 12px;
+  color: var(--text-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.history-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-left: 12px;
+}
+
+.history-empty {
+  padding: 10px 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}

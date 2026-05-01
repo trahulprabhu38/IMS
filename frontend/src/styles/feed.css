@@ -1,0 +1,169 @@
+/* ── Live Feed ─────────────────────────────────────────────────────────────── */
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 10px;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 5;
+  border-bottom: 1px solid var(--border);
+}
+
+.feed-header-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.feed-header-count {
+  font-size: 11px;
+  color: var(--clr-1);
+  font-variant-numeric: tabular-nums;
+  background: rgba(109,148,197,0.12);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(109,148,197,0.25);
+}
+
+.feed-list {
+  padding: 10px 12px;
+}
+
+/* ── Incident card ─────────────────────────────────────────────────────────── */
+.incident-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, box-shadow 0.12s;
+}
+
+.incident-card:hover {
+  background: var(--surface-2);
+  border-color: var(--border-2);
+  box-shadow: 0 2px 8px rgba(109,148,197,0.1);
+}
+
+.incident-card--active {
+  background: var(--surface-2);
+  border-color: var(--border-2);
+  border-left-color: var(--clr-1);
+}
+
+.incident-card--p0 { border-left-color: var(--p0); }
+.incident-card--p1 { border-left-color: var(--p1); }
+.incident-card--p2 { border-left-color: var(--p2); }
+.incident-card--p3 { border-left-color: var(--clr-1); }
+
+.incident-card--active.incident-card--p0 { border-color: rgba(196,48,48,0.35); }
+.incident-card--active.incident-card--p1 { border-color: rgba(181,96,32,0.35); }
+.incident-card--active.incident-card--p2 { border-color: rgba(138,120,24,0.35); }
+.incident-card--active.incident-card--p3 { border-color: rgba(109,148,197,0.35); }
+
+/* Card rows */
+.card-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.card-row:last-child { margin-bottom: 0; }
+
+.card-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.card-signal-count {
+  font-size: 11px;
+  color: var(--text-2);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  background: var(--surface-3);
+  padding: 1px 7px;
+  border-radius: 10px;
+}
+
+.card-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.card-mttr {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--clr-1);
+}
+
+.card-owner {
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.card-escalated {
+  font-size: 10px;
+  font-weight: 700;
+  color: #b02020;
+  background: rgba(196,48,48,0.1);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(196,48,48,0.3);
+}
+
+.card-unacked {
+  font-size: 11px;
+  font-weight: 900;
+  color: #a05010;
+  background: rgba(181,96,32,0.1);
+  padding: 0 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(181,96,32,0.3);
+  flex-shrink: 0;
+}
+
+.incident-card--escalated {
+  animation: escalated-pulse 3s ease-in-out infinite;
+}
+
+@keyframes escalated-pulse {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: 0 0 10px rgba(196,48,48,0.18); }
+}
+
+/* ── Empty state ───────────────────────────────────────────────────────────── */
+.feed-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.feed-empty-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.3;
+}
