@@ -26,6 +26,7 @@ Then open **http://localhost:3000** — the dashboard is live.
 | [docs/LLD.md](./docs/LLD.md) | Low-level design: signal pipeline, concurrency, backpressure, scaling |
 | [docs/MTTR.md](./docs/MTTR.md) | MTTR calculation — definition, formula, implementation, edge cases |
 | [docs/KUBERNETES.md](./docs/KUBERNETES.md) | Kubernetes deployment manifests and operational guide |
+| [docs/INTEGRATIONS.md](./docs/INTEGRATIONS.md) | External service integrations — Prometheus, Loki, Alloy, Uptime Kuma, AWS, universal log webhook |
 
 ---
 
